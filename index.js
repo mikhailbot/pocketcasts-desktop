@@ -3,6 +3,8 @@ const electron = require('electron');
 const isDev = require('electron-is-dev');
 const config = require('./config');
 
+const globalShortcut = electron.globalShortcut;
+
 const app = electron.app;
 
 // adds debug features like hotkeys for triggering dev tools and reload
@@ -49,6 +51,24 @@ app.on('activate', () => {
 
 app.on('ready', () => {
 	mainWindow = createMainWindow();
+
+	let keyRegisterFn = (...args) => globalShortcut.register(...args);
+
+	keyRegisterFn('MediaPreviousTrack', () => {
+		console.log('playback:previousTrack');
+	});
+
+	keyRegisterFn('MediaPlayPause', () => {
+		console.log('playback:playPause');
+	});
+
+	keyRegisterFn('MediaNextTrack', () => {
+		console.log('playback:nextTrack');
+	});
+
+	keyRegisterFn('MediaStop', () => {
+		console.log('playback:stop');
+	});
 });
 
 app.on('before-quit', () => {

@@ -9,5 +9,13 @@
 			<webview id="webview" preload="./scripts.js" src="https://play.pocketcasts.com/web" style="position:absolute;width:100%;height:100%;"></webview>
 		</div>
 		<script>console.log("Starting app!");</script>
+		<script>
+			var webview = document.getElementById("webview");
+			webview.addEventListener("dom-ready", function() {
+				console.log("READY");
+				webview.openDevTools();
+				webview.executeJavaScript(`setTimeout(function () {angular.element(document).injector().get('mediaPlayer').playPause()}, 10000)`)
+			});
+		</script>
 	</body>
 </html>
