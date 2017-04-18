@@ -1,0 +1,45 @@
+{
+  "name": "pocketcasts-desktop",
+  "productName": "PocketcastsDesktop",
+  "version": "0.0.0",
+  "description": "My good app",
+  "license": "MIT",
+  "repository": "mikhaildelport/pocketcasts-desktop",
+  "author": {
+    "name": "loken",
+    "email": "mikhail.delport@gmail.com",
+    "url": "delport.ca"
+  },
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --asar --overwrite --all"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app",
+    "electron"
+  ],
+  "dependencies": {
+    "electron-config": "^0.2.1",
+    "electron-debug": "^1.0.0"
+  },
+  "devDependencies": {
+    "devtron": "^1.1.0",
+    "electron": "^1.3.3",
+    "electron-is-dev": "^0.1.2",
+    "electron-packager": "^8.0.0",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}
