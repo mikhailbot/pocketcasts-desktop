@@ -1,13 +1,13 @@
 {
   "name": "pocketcasts-desktop",
-  "productName": "PocketcastsDesktop",
-  "version": "0.0.0",
-  "description": "My good app",
+  "productName": "PocketCasts Desktop",
+  "version": "0.1.0",
+  "description": "Pocket Casts Desktop Wrapper",
   "license": "MIT",
   "repository": "mikhaildelport/pocketcasts-desktop",
   "author": {
-    "name": "loken",
-    "email": "mikhail.delport@gmail.com",
+    "name": "Mikhail Delport",
+    "email": "mikhail@delport.ca",
     "url": "delport.ca"
   },
   "scripts": {

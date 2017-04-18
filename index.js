@@ -22,6 +22,7 @@ function createMainWindow() {
 	console.log(`Last Window State: ${lastWindowState.width} x ${lastWindowState.height}`);
 
 	const win = new electron.BrowserWindow({
+		title: app.getName(),
 		width: lastWindowState.width,
 		height: lastWindowState.height,
 		minWidth: 1000,
